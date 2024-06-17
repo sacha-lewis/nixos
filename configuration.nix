@@ -67,6 +67,7 @@ services.httpd.virtualHosts."example.org" = {
 
 services.mysql.enable = true;
 services.mysql.package = pkgs.mariadb;
+#services.mysql.package = pkgs.mysql80;
 
 # hacky way to create our directory structure and index page... don't actually use this
 systemd.tmpfiles.rules = [
@@ -135,7 +136,6 @@ environment.systemPackages = with pkgs; [
 # vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
 # wget
 ];
-
 
 
 
